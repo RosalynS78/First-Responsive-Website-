@@ -1,0 +1,126 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 0.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "main main main"
+      "one two three"
+      "one two three";
+}
+  .main { 
+      grid-area: main;
+      display: flex;
+      /* centers items on the line (the x-axis by default) */
+      justify-content: center;
+      /* centers items on the cross-axis (y by default) */
+      align-items: center;
+      background-color:rgb(9,41,85);
+      font-family: 'Dancing Script', cursive;
+      font-size: 85px;
+      color: rgb(252,227,181); 
+  }
+    h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    }
+  .one { 
+    grid-area: one;
+    background-color: rgb(216,56,31);
+    color: rgb(9,41,85);
+    padding: 80px 80px 80px 80px;
+  } 
+    #onelink {
+    display: block;
+    background-color: rgb(29,112,143);
+    padding-top: 10px;
+    width: 250px ;
+    height: 30px;
+    }
+    li.sublink1 a {
+    color: rgb(235,109,56);
+  }
+  .two { 
+    grid-area: two;
+    background-color: rgb(235,109,56);
+    color: rgb(9,41,85);
+    padding: 80px 80px 80px 80px;
+  }
+    #twolink {
+    display: block;
+    background-color: rgb(45,141,154);
+    padding-top: 10px;
+    width: 250px ;
+    height: 30px;
+    }
+    li.sublink2 a {
+    color: rgb(242,168,106);
+  }
+  .three { 
+    grid-area: three;
+    background-color: rgb(242,168,106);
+    color: rgb(9,41,85);
+    padding: 80px 80px 80px 80px;
+  }
+    #threelink {
+    display: block;
+    background-color: rgb(135,174,168);
+    padding-top: 10px;
+    width: 250px ;
+    height: 30px;
+  }
+    li.sublink3 a {
+    color: rgb(216,56,31);
+  }
+  @media (max-width: 576px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "main"
+        "one"
+        "two"
+        "three"
+    }
+  } 
+    .main {
+      display: flex;
+      background-color: rgb(130,170,161);
+      justify-content: center;
+      font-size: 50px;
+      height: auto
+   }
+   .one {
+      display: block;
+   }
+   .two {
+      display: block;
+   }
+   .three {
+      display: block;
+   }   
+
+@media (min-width: 900px) {
+  .container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1.2fr 0.8fr 1fr;
+      grid-template-areas:
+        "main main main"
+        "one two three"
+        "one two three";
+ }
+  .main {
+      display: grid;
+  }
+  .one {
+      display: grid;
+  }
+  .two {
+      display: grid;
+  }
+  .three {
+      display: grid;
+  }   
+
+}
